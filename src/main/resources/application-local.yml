@@ -1,0 +1,10 @@
+# Local development only. Matches docker-compose.yml; these are throwaway local credentials.
+spring:
+  datasource:
+    username: fixgo
+    password: fixgo_local
+
+app:
+  notifications:
+    push-sender: logging
+    internal-api-key: local-dev-key

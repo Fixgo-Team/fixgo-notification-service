@@ -1,0 +1,22 @@
+server:
+  port: 3004
+
+spring:
+  application:
+    name: notification-service
+  datasource:
+    url: ${APP_NOTIFICATIONS_DATABASE_URL:jdbc:mysql://localhost:3306/notification_db}
+    username: ${APP_NOTIFICATIONS_DATABASE_USER:}
+    password: ${APP_NOTIFICATIONS_DATABASE_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+app:
+  notifications:
+    push-sender: ${APP_NOTIFICATIONS_PUSH_SENDER:logging}
+    internal-api-key: ${APP_NOTIFICATIONS_INTERNAL_API_KEY:}

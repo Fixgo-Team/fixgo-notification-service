@@ -1,0 +1,15 @@
+target/
+.env
+*.log
+
+# Firebase credentials must never be committed
+*firebase*adminsdk*.json
+service-account*.json
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
